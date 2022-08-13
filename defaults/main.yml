@@ -1,0 +1,10 @@
+---
+# defaults file for db-server-mysql
+primary_host: db1.reserdukov.ru
+replica_host: db2.reserdukov.ru
+
+primary_server: db1
+replica_server: db2
+
+db1_ip: 192.168.31.3
+db2_ip: 192.168.31.4

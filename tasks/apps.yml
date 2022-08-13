@@ -1,0 +1,18 @@
+---
+# Configure Mysql fo apps
+
+- name: Mysql configure | Create db
+  become: true
+  community.mysql.mysql_db:
+    name: '{{ mysql_db }}'
+    master_data: 1
+    state: present
+  
+- name: Mysql configure | Create user for app
+  become: true
+  community.mysql.mysql_user:
+    name: '{{ mysql_user }}'
+    host: '%'
+    password: '{{ mysql_pass }}'
+    priv: '{{ mysql_db }}.*:ALL,GRANT'
+    state: present
