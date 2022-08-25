@@ -11,8 +11,10 @@ Ansible role для настройки серверов mysql в режиме р
 Requirements
 ------------
 
-Работоспособность протестирована на Ubuntu 20.04.
-
+Работоспособность протестирована на:
+- Целевые VM Ubintu 20.04
+- Ansible core 2.13.1
+- Python version 3.8.1
 
 Role Variables
 --------------
@@ -30,7 +32,7 @@ Example Playbook
 - name: Install mysql server
   hosts: servers
   roles:
-    - { role: reverse-proxy-nginx, when: ansible_lsb.id == 'Ubuntu' }
+    - reverse-proxy-nginx
 ```
 
 Before start
