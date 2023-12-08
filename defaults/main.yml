@@ -1,10 +1,12 @@
 ---
 # defaults file for db-server-mysql
-primary_host: db1.reserdukov.ru
-replica_host: db2.reserdukov.ru
+my_domain: your_domain
 
 primary_server: db1
 replica_server: db2
+
+primary_host: db1.{{ my_domain }}
+replica_host: db2.{{ my_domain }}
 
 db1_ip: 192.168.31.3
 db2_ip: 192.168.31.4
